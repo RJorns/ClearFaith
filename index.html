@@ -8,9 +8,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   <link rel="stylesheet" href="./stylesheet/index.css">
-  <title>Clear Faith</title>
+  <title>Clear Faith Ministry</title>
 </head>
 <body>
+
+  <script>document.body.className = 'fade';</script>
 
   <!-- Header -->
 
@@ -19,11 +21,10 @@
     <img class="logo-header" src="./assets/img/logo.png" alt="">
       <nav class="nav-header">
         <ul>
-          <li class="nav-item"><a href="">Ministries</a></li>
-          <li class="nav-item"><a href="">About</a></li>
-          <li class="nav-item"><a href="">Counseling</a></li>
+          <li class="nav-item"><a href="./cfministry.html">Ministries</a></li>
+          <li class="nav-item"><a href="#about">About</a></li>
           <li class="nav-item"><a href="">Book</a></li>
-          <li class="nav-item"><a href="">Contact</a></li>
+          <li class="nav-item"><a href="#contact">Contact</a></li>
         </ul>
       </nav>
       <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
@@ -35,7 +36,7 @@
   <div class="hero-wrapper flex-center">
     <div class="hero-message">
       <h1 class="hero-title">Clear Faith Ministries</h1>
-      <h3 class="hero-sub">Helping you connect to Christ</h3>
+      <h3 class="hero-sub">Ministries that are Clear where their Faith lies</h3>
     </div>
     <div class="hero-buttons">
       <a href=""><button class="hero-btn facebook-btn"><i class="facebook icon"></i>Find us on Facebook</button></a>
@@ -43,11 +44,13 @@
     </div>
   </div>
 
+<scroll-container>
+
 
   <!-- About -->
 
   <div class="about-wrapper">
-    <div class="about">
+    <div id="about" class="about">
       <h1 class="about-name">Pastor Devin Miller</h1>
       <img class="about-pic" src="./assets/img/cleardevinmiller.png" alt="">
     </div>
@@ -104,7 +107,7 @@
   <!-- Contact  -->
 
   <div class="contact-wrapper">
-    <div class="contact-title"><h1>Contact</h1></div>
+    <div id="contact" class="contact-title"><h1>Contact</h1></div>
     <form class="contact-form ui form">
       <div class="form-wrapper">
         <input class="form-input" id="name" type="text" placeholder="Name" required>
@@ -118,40 +121,50 @@
       <div class="field">
         <textarea rows="4" id="message" type="text" required></textarea>
       </div>
-      <button id="submit" class="ui grey button">Submit</button>
+      <a href="matilto: devinlmiller65@gmail.com"><button id="submit" class="ui button">Submit</button></a>
     </form>
   </div>
+
+</scroll-container>
 
 
   <!-- Footer -->
 
   <div class="footer-wrapper">
     <div class="footer">
-      <ul class="footer-social">
-        <a href=""><button class="ui circular facebook icon button social-btn">
-          <i class="facebook icon"></i>
-        </button></a>
-        <a href=""><button class="ui circular twitter icon button social-btn">
-          <i class="twitter icon"></i>
-        </button></a>
-        <a href=""><button class="ui circular blue icon button social-btn">
-          <i class="thumbtack icon"></i>
-        </button></a>
-      </ul>
-    </div>
-    <div class="footer">
-      <ul class="footer-links">
-        <a class="footer-link" href=""><li>Counseling</li></a>
-        <a class="footer-link" href=""><li>Broadcast</li></a>
-        <a class="footer-link" href=""><li>Book</li></a>
-        <a class="footer-link" href=""><li>Link 4</li></a>
-      </ul>
-    </div>
-    <div class="footer footer-copyright">
-      <p>Created by<a href=""><p>RogerJornsWebDev</p></a></p>
-      <p>Contact<a href="mailto:"> RogerJornsWebDev</a></p>
-    </div>
+        <ul class="footer-social">
+          <a href=""><button class="ui circular facebook icon button social-btn">
+            <i class="facebook icon"></i>
+          </button></a>
+          <a href=""><button class="ui circular twitter icon button social-btn">
+            <i class="twitter icon"></i>
+          </button></a>
+          <a href=""><button class="ui circular blue icon button social-btn">
+            <i class="thumbtack icon"></i>
+          </button></a>
+        </ul>
+      </div>
+      <div class="footer">
+        <ul class="footer-links">
+          <a class="footer-link" href=""><li>Counseling</li></a>
+          <a class="footer-link" href=""><li>Broadcast</li></a>
+          <a class="footer-link" href=""><li>Book</li></a>
+          <a class="footer-link" href=""><li>Link 4</li></a>
+        </ul>
+      </div>
+      <div class="footer footer-copyright">
+        <p>Created by<a href=""><p>RogerJornsWebDev</p></a></p>
+        <p>Contact<a href="mailto: rogerjornswebdev@gmail.com"> RogerJornsWebDev</a></p>
+      </div>
   </div>
 
+
+
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function(e) {
+    document.body.className = '';
+  });
+  </script>
 </body>
 </html>
