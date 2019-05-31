@@ -22,28 +22,48 @@ body.fade {
   transition: none;
 }
 
+a {
+  color: inherit;
+  cursor: pointer;
+}
+
+h1 {
+  color: #4F92BA;
+  text-shadow: 0px 2px 2px rgba(150, 150, 150, 0.55);
+}
+
+p {
+  font-size: 1.15em;
+}
+
 
 /* Header */
 
-img.logo-header {
-  width: 7em;
-  height: 7em;
-}
-
 .header-wrapper {
   width: 100%;
-  height: 12em;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: 1fr 2.5fr;
-  background: rgb(70,134,160);
-  background: linear-gradient(159deg, rgba(70,134,160,1) 11%, rgba(52,73,92,1) 48%, rgba(69,89,107,1) 71%);
+  grid-template-columns: 1fr 1.5fr;
+  background-image: linear-gradient(19deg,  rgba(69,127,202,1) 3.6%, rgba(23,77,145,1) 94.9% );
+  z-index: -1;
 }
 
 .logo-header {
   grid-column: 1;
+  margin: 1em .5em 0 .5em;
 }
+
+.fa-cross {
+  font-size: 1.5em;
+}
+
+.logo {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(119deg,  rgba(24,175,231,1) 25.2%, rgba(67,82,186,1) 74.6% );
+}
+
 
 
 /* Navbar */
@@ -66,7 +86,7 @@ nav ul {
 }
 
 nav li {
-  margin: 0 0 1em 1em;
+  margin: .5em 0;
 }
 
 nav a {
@@ -77,9 +97,8 @@ nav a {
   transition: opacity 150ms ease-in-out;
 }
 
-.nav-item:hover {
-  /* Change Color  */
-  color: #000;
+.nav-item {
+  color: #66A0D9;
 }
 
 .nav-toggle:checked ~ nav {
@@ -204,8 +223,7 @@ nav a {
 }
 
 .hero-message {
-  color: #4686a0;
-  text-shadow: #343a40 2px 2px;
+  text-shadow: #343a40 1px 1px;
   min-width: 100%;
   min-height: 20em;
   position: relative;
@@ -217,10 +235,19 @@ nav a {
   position: absolute;
   margin-left: 0;
   min-width: 100%;
-  min-height: 10em;
+  min-height: 11em;
   z-index: -1;
   opacity: 0.4;
   background-color: #343a40;
+}
+
+.hero-title {
+  font-size: 2.25em;
+  color: #4387C9;
+}
+
+.hero-sub {
+  color: #66A0D9;
 }
 
 .hero-title,
@@ -246,7 +273,6 @@ nav a {
   padding: 1.15em 2em;
   background-color: transparent;
   border-radius: 3.5em;
-  /* outline: none; */
 }
 
 .facebook-btn {
@@ -279,7 +305,7 @@ nav a {
 
 .about-paragraph {
   margin: 0 auto;
-  max-width: 35ch;
+  max-width: 30ch;
 }
 
 @media (min-width: 768px){
@@ -318,6 +344,10 @@ h1.about-title:first-child {
   margin: 3em .5em;
 }
 
+.main-ministry-title {
+  margin: 2em 0 4em 0;
+}
+
 .ministry {
   margin: .5em;
   width: 25em;
@@ -353,8 +383,7 @@ h1.about-title:first-child {
 }
 
 .ministry-msg {
-  color: #fff;
-  text-shadow: #343a40 2px 2px;
+  color: transparent;
   width: 100%;
   min-height: 15em;
   position: relative;
@@ -377,11 +406,31 @@ h1.about-title:first-child {
   width: 100%;
   display: block;
   text-align: center;
-  margin: 2em 0;
+  color: #66A0D9;
+  text-shadow: #343a40 0px 1px 1px;
+}
+
+.ministry-title:first-child,
+.ministry-subtitle:first-child {
+  margin-top: 1em;
 }
 
 .ministry-title {
-  font-size: 1.25em;
+  font-size: 1.5em;
+}
+
+i.fas {
+  font-size: 2.25em;
+  margin: .5em 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(119deg,  rgba(29,70,163,1) 5.6%, rgba(17,196,238,1) 109.7% );
+}
+
+#ministry-btn {
+  margin-top: 2em;
+  color: #fff;
+  background: #457fca;
 }
 
 
@@ -422,20 +471,20 @@ input:focus ~ label {
 }
 
 #submit {
-  color: #fff;
-  background: rgb(70,134,160);
-  /* background: radial-gradient(circle, rgba(70,134,160,1) 3%, rgba(52,73,92,1) 38%, rgba(69,89,107,1) 88%); */
+  /* color: #fff; */
+  /* background: rgb(70,134,160); */
+  /* background: #457fca; */
 }
 
 
 /* Footer */
 
 .footer-wrapper {
+  color: white;
   margin-top: 2em;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  background: rgb(70,134,160);
-  background: linear-gradient(159deg, rgba(70,134,160,1) 11%, rgba(52,73,92,1) 48%, rgba(69,89,107,1) 71%);
+  background-image: linear-gradient(19deg,  rgba(69,127,202,1) 3.6%, rgba(23,77,145,1) 94.9% );
 }
 
 .footer {
@@ -446,17 +495,24 @@ input:focus ~ label {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: .25em;
+}
+
+.ui.button {
+  margin: .25em 0;
 }
 
 .footer-links {
   list-style: none;
-  margin: 2em 0 1em 0;
+}
+
+.footer-link {
+  margin: 2em .25em 1em .25em;
 }
 
 .footer-copyright {
-  margin: 2em .25em 1em .25em;
+  margin: 2em .25em .5em .25em;
 }
 
 .footer-copyright p {
