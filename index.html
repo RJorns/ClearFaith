@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="./stylesheet/index.css">
 
   <title>Clear Faith Ministry</title>
+
 </head>
 <body>
 
@@ -18,9 +19,12 @@
 
   <!-- Header -->
 
-  <div class="header-wrapper">
+  <div class="header-wrapper top-btm-color">
     <input type="checkbox" id="nav-toggle" class="nav-toggle">
-    <img class="logo-header" src="./assets/img/logo.png" alt="">
+    <div class="logo-header">
+      <a href="./index.html"><h3 class="logo">Clear Faith <br>Minis <i class="fas fa-cross"></i> ries</h3></a>
+    </div>
+    <!-- <img class="logo-header" src="./assets/img/cflogo.png" alt=""> -->
       <nav class="nav-header">
         <ul>
           <li class="nav-item"><a href="#about">About</a></li>
@@ -37,7 +41,7 @@
 
   <div class="hero-wrapper flex-center">
     <div class="hero-message">
-      <h1 class="hero-title">Clear Faith Ministries</h1>
+      <h2 class="hero-title">Clear Faith Ministries</h2>
       <h3 class="hero-sub">Ministries that are Clear where their Faith lies</h3>
     </div>
     <div class="hero-buttons">
@@ -56,14 +60,14 @@
       <h1 class="about-name">Pastor Devin Miller</h1>
       <img class="about-pic" src="./assets/img/cleardevinmiller.png" alt="">
     </div>
-    <button class="ui facebook button"><i class="facebook icon"></i>Facebook</button>
+    <a href="https://www.facebook.com/groups/438147002902452/"><button class="ui facebook button"><i class="facebook icon"></i>Facebook</button></a>
+    <h1 class="about-title">Clear Faith Ministries</h1>
     <div class="about-paragraph">
-      <h1 class="about-title">Clear Faith Ministries</h1>
       <p>The mission/vision of Clear Faith Christian Ministries is to serve the body of Christ through Prayer, Teaching, Fellowship and Services.
         We believe that we were created to serve the Kingdom and expand it one soul at a time.
-        This online ministry focuses on reaching those online who have lost hope in the traditional church yet still have faith in God
+        <p>This online ministry focuses on reaching those online who have lost hope in the traditional church yet still have faith in God
         through Jesus Christ. Our aim is to provide fervent prayer, relevant study, true and meaningful fellowship,
-        and integral services to the least, the left out, and the lost in and outside the church</p>
+        and integral services to the least, the left out, and the lost in and outside the church</p></p>
       <p>Today, Clear Faith Christian Ministries continues to teach on Facebook and has added other ministries: <br>
         <br>- The 52-week Savings Challenge: An online savings program that encourages the members and those following the ministry to save. <br>
         <br>- Midnight Chronicles: A broadcast at midnight where the Pastor shares thought related to life and ministry. <br>(During the summer: June-August) <br>
@@ -81,28 +85,29 @@
   <!-- Ministries -->
 
   <div class="ministry-wrapper">
-    <div class="ministry-title"><h1>Ministries</h1></div>
+    <div class="main-ministry-title"><h1>Ministries</h1></div>
     <div id="ministry1" class="ministry flex-center">
       <div class="ministry-msg">
-        <h1 class="ministry-title">52 week Savings Challenge</h1>
+        <h2 class="ministry-title">52 week Savings Challenge</h2>
         <i class="fas fa-dollar-sign"></i>
-        <p class="ministry-subtitle">Learning to give and save for the Lord.</p>
+        <p class="ministry-subtitle">Learning to give and save for the Lord</p>
       </div>
     </div>
     <div id="ministry2" class="ministry flex-center">
       <div class="ministry-msg">
-        <h1 class="ministry-title">Midnight Chronicles</h1>
+        <h2 class="ministry-title">Midnight Chronicles</h2>
         <i class="fas fa-moon"></i>
         <p class="ministry-subtitle">Late-night thoughts on life and Ministry with the Pastor</p>
       </div>
     </div>
     <div id="ministry3" class="ministry flex-center">
       <div class="ministry-msg">
-        <h1 class="ministry-title">Bibilical Discussions Podcast</h1>
+        <h2 class="ministry-title">Bibilical Discussions Podcast</h2>
         <i class="fas fa-bible"></i>
         <p class="ministry-subtitle">Teaching from the Bible on Facebook live</p>
       </div>
     </div>
+    <a href=""><button id="ministry-btn" class="ui button">Ministries Page</button></a>
   </div>
 
 
@@ -110,29 +115,33 @@
 
   <div class="contact-wrapper">
     <div id="contact" class="contact-title"><h1>Contact</h1></div>
-    <form class="contact-form ui form">
+    <form class="contact-form ui form" name="freecontactform" method="post" action="freecontactformprocess.php" onsubmit="return validate.check(this)">
       <div class="form-wrapper">
         <input class="form-input" id="name" type="text" placeholder="Name" required>
-				<label class="form-label">Name</label>
+				<label class="form-label" for="Full_Name">Name</label>
       </div>
-      <div class="form-wrapper">
+      <div class="form-wrapper" >
     		<input class="form-input" id="email" type="text" placeholder="Email" required>
-				<label class="form-label">Email</label>
+				<label class="form-label" for="Email_Address">Email</label>
       </div>
-      <label class="form-label">Message</label>
+      <label class="form-label" for="Your_Message">Message</label>
       <div class="field">
-        <textarea rows="4" id="message" type="text" required></textarea>
+        <textarea rows="4" id="message" type="text" name="Your_Message" required></textarea>
       </div>
-      <a href="matilto: devinlmiller65@gmail.com"><button id="submit" class="ui button">Submit</button></a>
+      <a href="mailto: devinlmiller65@gmail.com"><button type="submit" value="Submit Form " id="submit" class="ui button">Submit</button></a>
     </form>
   </div>
+
+
+  <a href="http://www.123formbuilder.com/form-4843164/contact-form"><button>Click Here</button></a>
+
 
 </scroll-container>
 
 
   <!-- Footer -->
 
-  <div class="footer-wrapper">
+  <div class="footer-wrapper top-btm-color">
     <div class="footer">
         <ul class="footer-social">
           <a href=""><button class="ui circular facebook icon button social-btn">
