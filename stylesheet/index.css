@@ -305,7 +305,7 @@ nav a {
 
 .about-paragraph {
   margin: 0 auto;
-  max-width: 30ch;
+  max-width: 32ch;
 }
 
 @media (min-width: 768px){
@@ -338,14 +338,17 @@ h1.about-title:first-child {
 /* Ministries */
 
 .ministry-wrapper {
+  margin-top: 5em;
+}
+
+.ministry-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 3em .5em;
 }
 
 .main-ministry-title {
-  margin: 2em 0 4em 0;
+  margin: 2em 0;
 }
 
 .ministry {
@@ -438,42 +441,19 @@ i.fas {
 
 .contact-wrapper {
   margin: 0 auto;
-  max-width: 75%;
+  padding: 5em 2em 2em 2em;
 }
 
-.contact-title {
-  margin-bottom: 2em;
+.contact-wrapper p {
+  margin: 0 auto;
+  max-width: 35ch;
 }
 
-.contact-form {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.form-wrapper {
-  display: flex;
-  flex-direction: column-reverse;
-}
-
-input {
-  box-shadow: inset 0px 0px 13px -1px rgba(77, 77, 77, 1);
-}
-
-.form-label {
-  display: flex;
-  color: #515151;
-}
-
-input:focus ~ label {
-  color: #a0a0a0;
-}
 
 #submit {
-  /* color: #fff; */
-  /* background: rgb(70,134,160); */
-  /* background: #457fca; */
+  margin-top: 2em;
+  color: #fff;
+  background: #457fca;
 }
 
 
