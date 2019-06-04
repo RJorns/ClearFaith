@@ -27,34 +27,46 @@ hr {
   padding-bottom: 2em;
 }
 
+.intro-text p {
+  margin: 0 auto;
+  max-width: 30ch;
+}
+
 
 /* Ministries */
 
 .ministries-wrapper {
-  padding: 5em 0;
   background: rgb(252,253,254);
   background: linear-gradient(159deg, rgba(252,253,254,1) 1%, rgba(232,232,232,1) 23%, rgba(231,231,232,1) 60%, rgba(207,216,224,1) 86%);
 }
 
-.ministries {
-  margin: 1.5em;
+.ministries-header h2 {
+  padding-top: 5em;
+}
+
+.ministries-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin: 2em 0;
 }
 
 .min-pics {
-  width: 100%;
-  height: auto;
-  margin: 2em 0;
+  margin: 1.25em;
+}
+
+.min-pictures {
+  width: 20em;
+  height: 15em;
   filter: grayscale(40%);
-  border-radius: 5%;
+  border-radius: 2%;
   box-shadow: 4px 4px 25px -10px rgba(163,163,163,1);
 }
 
-.ministries-title {
-  margin-bottom: 2em;
-}
-
-.ministries-info {
-  margin-bottom: 2.5em;
+.min-info {
+  margin: 0 auto;
+  max-width: 30ch;
 }
 
 
@@ -65,10 +77,12 @@ hr {
 }
 
 .services-header {
-  margin: 5em 0;
+  margin: 0 auto;
+  max-width: 30ch;
 }
 
 .services {
+  margin-top: 5em;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -105,10 +119,9 @@ hr {
   background-color: rgba(23, 24, 32, .75);
   position: absolute;
   left: 0;
-  /* width: 5em; */
   height: 25em;
   margin: 0;
-  padding: 3em 2em;
+  padding: 1.5em .75em;
   border-right: 3px solid #418aa7;
   color: white;
 }
@@ -117,10 +130,9 @@ hr {
   background-color: rgba(23, 24, 32, .75);
   position: absolute;
   right: 0;
-  width: 15em;
   height: 25em;
   margin: 0;
-  padding: 3em 2em;
+  padding: 1.5em .75em;
   border-left: 3px solid #418aa7;
   color: white;
 }
@@ -129,12 +141,17 @@ hr {
   background-color: rgba(23, 24, 32, .75);
   position: absolute;
   left: 0;
-  width: 15em;
   height: 25em;
   margin: 0;
-  padding: 3em 2em;
+  padding: 1.5em .75em;
   border-right: 3px solid #418aa7;
   color: white;
+}
+
+.counseling-text p,
+.consulting-text p,
+.coaching-text p {
+  max-width: 30ch;
 }
 
 .service-btn {
@@ -143,7 +160,6 @@ hr {
   color: white;
   background-color: transparent;
   padding: .75em 3em;
-  margin-top: 2em;
 }
 
 h2.prices-title:first-child {
@@ -153,4 +169,59 @@ h2.prices-title:first-child {
 .prices {
   margin: .75em 0;
   font-size: 1.15em;
+}
+
+
+/* Media Queries */
+
+@media (min-width: 768px) {
+
+  .intro-pic {
+    width: 70%;
+  }
+
+  .intro-text p {
+    max-width: 45ch;
+    font-size: 1.15em;
+  }
+
+  .services-header {
+    margin: 0 auto;
+    max-width: 40ch;
+  }
+
+  .counseling-text p,
+  .consulting-text p,
+  .coaching-text p {
+    max-width: 50ch;
+  }
+
+  .service-btn {
+    margin-top: 2em;
+  }
+
+}
+
+@media (min-width: 1024px) {
+
+  .intro-pic {
+    width: 40%;
+  }
+
+  .intro-text p {
+    max-width: 60ch;
+    font-size: 1.25em;
+  }
+
+
+}
+
+@media (min-width: 1440px) {
+
+  .counseling-text p,
+  .consulting-text p,
+  .coaching-text p {
+    max-width: 65ch;
+  }
+
 }
