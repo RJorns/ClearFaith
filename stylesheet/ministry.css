@@ -1,227 +1,613 @@
-hr {
-  background: rgba(144, 144, 144, 0.5);
-  display: inline-block;
-  height: .5px;
-  margin: 1.5em 0 2.5em 0;
-  width: 8em;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  color: #606060;
+  opacity: 1;
+  transition: 0.7s opacity;
+  scroll-behavior: smooth;
+}
+
+body.fade {
+  opacity: 0;
+  transition: none;
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+}
+
+h1 {
+  color: #4F92BA;
+  text-shadow: 0px 2px 2px rgba(150, 150, 150, 0.55);
+}
+
+p {
+  font-size: 1.15em;
 }
 
 
-/* Intro to Ministries */
+/* Header */
 
-.intro-wrapper {
-  margin: 3em 0;
+.header-wrapper {
+  width: 100%;
+  height: 10em;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  background-image: linear-gradient(19deg,  rgba(69,127,202,1) 3.6%, rgba(23,77,145,1) 94.9% );
+  z-index: -1;
 }
 
-.intro-container {
-  margin: 0 2em;
+.logo-header {
+  grid-column: 1;
+  margin: 0 .35em;
 }
 
-.intro-pic {
+.logo {
   width: 100%;
   height: auto;
 }
 
-.intro-text {
-  margin: 2em;
-  padding-bottom: 2em;
+
+/* Navbar */
+
+.nav-header {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.intro-text p {
+
+/* Navbar Hamburger Menu */
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin: .5em 0;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+.nav-item {
+  color: #66A0D9;
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  -webkit-transition: opacity 250ms ease-in-out 250ms;
+  -o-transition: opacity 250ms ease-in-out 250ms;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+/* Make middle bar invisible */
+
+.nav-toggle:checked ~ .nav-toggle-label > span {
+	background-color: transparent;
+}
+
+/* Rotate and translate the top and bottom bar */
+
+.nav-toggle:checked ~ .nav-toggle-label > span::before {
+	transform: translateY(0.5em) rotate(45deg)
+}
+
+.nav-toggle:checked ~ .nav-toggle-label > span::after {
+	transform: translateY(-0.5em) rotate(-45deg)
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 4em;
+  right: 0;
+  margin-right: 1em;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: black;
+  height: .125em;
+  width: 2.15em;
+  border-radius: .125em;
+  position: relative;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: .5em;
+}
+
+.nav-toggle-label span::after {
+  top: .5em;
+}
+
+.open .nav-toggle {
+  transform: rotate(45deg);
+}
+
+.open .nav-toggle::before {
+  opacity: 0;
+}
+
+.open .nav-toggle::after {
+  transform: translateY(-3px) rotate(-90deg);
+}
+
+
+/* Hero */
+
+.hero-wrapper {
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.hero-wrapper::before {
+  background-image: url('../assets/img/couch.jpg');
+  background-size:cover;
+  background-position: center;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  opacity: 0.4;
+}
+
+.hero-wrapper::after {
+  background-color: #314F59;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: .35;
+}
+
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.hero-message {
+  text-shadow: #343a40 1px 1px;
+  min-width: 100%;
+  min-height: 20em;
+  position: relative;
+}
+
+.hero-message::before {
+  content: "";
+  display: block;
+  position: absolute;
+  margin-left: 0;
+  min-width: 100%;
+  min-height: 11em;
+  z-index: -1;
+  opacity: 0.4;
+  background-color: #343a40;
+}
+
+.hero-title {
+  font-size: 2.25em;
+  color: #4387C9;
+}
+
+.hero-sub {
+  color: #66A0D9;
+}
+
+.hero-title,
+.hero-sub {
+  width: 100%;
+  display: block;
+}
+
+.hero-title {
+  margin: 3% 0;
+  text-transform: uppercase;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.hero-btn {
+  margin: 1em 0;
+  padding: 1.15em 2em;
+  background-color: transparent;
+  border-radius: 3.5em;
+}
+
+.facebook-btn {
+  border-color: #4e71ba;
+  color: #2f55a4;
+}
+
+.thumbtack-btn {
+  color: #00baff;
+  border-color: #009fd9;
+}
+
+
+/* About */
+
+.about-wrapper {
+  background: #f2f2f2;
+}
+
+.about {
+  padding-top: 5em;
+}
+
+.about-pic {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 1.5em;
+}
+
+.about-paragraph {
   margin: 0 auto;
-  max-width: 30ch;
+  max-width: 32ch;
+}
+
+@media (min-width: 768px){
+
+  .about-paragraph {
+    font-size: 1.25em;
+    max-width: 50ch;
+  }
+
+}
+
+@media (min-width: 1440px){
+
+  .about-paragraph {
+    font-size: 1.25em;
+    max-width: 75ch;
+  }
+
+}
+
+.about-title {
+  margin-bottom: 1.5em;
+}
+
+h1.about-title:first-child {
+  margin-top: 2em;
 }
 
 
 /* Ministries */
 
-.ministries-wrapper {
-  background: rgb(252,253,254);
-  background: linear-gradient(159deg, rgba(252,253,254,1) 1%, rgba(232,232,232,1) 23%, rgba(231,231,232,1) 60%, rgba(207,216,224,1) 86%);
-}
-
-.ministries-header h2 {
-  padding-top: 5em;
-}
-
-.ministries-container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  margin: 2em 0;
-}
-
-.min-pics {
-  margin: 1.25em;
-}
-
-.min-pictures {
-  width: 20em;
-  height: 15em;
-  filter: grayscale(40%);
-  border-radius: 2%;
-  box-shadow: 4px 4px 25px -10px rgba(163,163,163,1);
-}
-
-.min-info {
-  margin: 0 auto;
-  max-width: 30ch;
-}
-
-
-/* Services */
-
-.services-container {
-  margin: 5em 0;
-}
-
-.services-header {
-  margin: 0 auto;
-  max-width: 30ch;
-}
-
-.services {
+.ministry-wrapper {
   margin-top: 5em;
+}
+
+.ministry-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.counseling {
-  background-image: url('https://images.unsplash.com/photo-1554730411-1385c7e46ecc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1649&q=80');
+.main-ministry-title {
+  margin: 2em 0;
+}
+
+.ministry {
+  margin: .5em;
+  width: 25em;
+  height: 20em;
+}
+
+#ministry1 {
+  background-image: url('../assets/img/money.jpg');
+  background-size: cover;
   background-position: center;
-  background-size:cover;
-  background-attachment: fixed;
-  width: 100%;
-  height: 25em;
+  z-index: -2;
 }
 
-.consulting {
-  background-image: url('https://images.unsplash.com/photo-1454923634634-bd1614719a7b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80');
+#ministry2 {
+  background-image: url('../assets/img/nightsky.jpg');
+  background-size: cover;
   background-position: center;
-  background-size:cover;
-  background-attachment: fixed;
-  width: 100%;
-  height: 25em;
+  z-index: -2;
 }
 
-.coaching {
-  background-image: url('https://images.unsplash.com/photo-1425421669292-0c3da3b8f529?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1649&q=80');
+#ministry3 {
+  background-image: url('../assets/img/bible.jpg');
+  background-size: cover;
   background-position: center;
-  background-size:cover;
-  background-attachment: fixed;
+  z-index: -2;
+}
+
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.ministry-msg {
+  color: transparent;
   width: 100%;
-  height: 25em;
+  min-height: 15em;
+  position: relative;
+  text-transform: uppercase;
 }
 
-.counseling-text {
-  background-color: rgba(23, 24, 32, .75);
+.ministry-msg::before {
+  content: "";
+  display: block;
   position: absolute;
-  left: 0;
-  height: 25em;
-  margin: 0;
-  padding: 1.5em .75em;
-  border-right: 3px solid #418aa7;
-  color: white;
+  z-index: -1;
+  min-width: 100%;
+  height: 15em;
+  opacity: 0.35;
+  background-color: #474747;
 }
 
-.consulting-text {
-  background-color: rgba(23, 24, 32, .75);
-  position: absolute;
-  right: 0;
-  height: 25em;
-  margin: 0;
-  padding: 1.5em .75em;
-  border-left: 3px solid #418aa7;
-  color: white;
+.ministry-title,
+.ministry-subtitle {
+  width: 100%;
+  display: block;
+  text-align: center;
+  color: #66A0D9;
+  text-shadow: #343a40 0px 1px 1px;
 }
 
-.coaching-text {
-  background-color: rgba(23, 24, 32, .75);
-  position: absolute;
-  left: 0;
-  height: 25em;
-  margin: 0;
-  padding: 1.5em .75em;
-  border-right: 3px solid #418aa7;
-  color: white;
+.ministry-title:first-child,
+.ministry-subtitle:first-child {
+  margin-top: 1em;
 }
 
-.counseling-text p,
-.consulting-text p,
-.coaching-text p {
-  max-width: 30ch;
+.ministry-title {
+  font-size: 1.5em;
 }
 
-.service-btn {
-  border: 1px solid white;
-  border-radius: .25em;
-  color: white;
-  background-color: transparent;
-  padding: .75em 3em;
+i.fas {
+  font-size: 2.25em;
+  margin: .5em 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(119deg,  rgba(29,70,163,1) 5.6%, rgba(17,196,238,1) 109.7% );
 }
 
-h2.prices-title:first-child {
+#ministry-btn {
   margin-top: 2em;
-}
-
-.prices {
-  margin: .75em 0;
-  font-size: 1.15em;
+  color: #fff;
+  background: #457fca;
 }
 
 
-/* Media Queries */
+/* Contact */
+
+.contact-wrapper {
+  margin: 0 auto;
+  padding: 5em 2em 2em 2em;
+}
+
+.contact-wrapper p {
+  margin: 0 auto;
+  max-width: 35ch;
+}
+
+
+#submit {
+  margin-top: 2em;
+  color: #fff;
+  background: #457fca;
+}
+
+
+/* Footer */
+
+.footer-wrapper {
+  color: white;
+  margin-top: 2em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-image: linear-gradient(19deg,  rgba(69,127,202,1) 3.6%, rgba(23,77,145,1) 94.9% );
+}
+
+.footer {
+  margin: 0 .5em;
+}
+
+.footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: .25em;
+}
+
+.ui.button {
+  margin: .25em 0;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-link {
+  margin: 2em .25em 1em .25em;
+}
+
+.footer-copyright {
+  margin: 2em .25em .5em .25em;
+}
+
+.footer-copyright p {
+  margin: 0;
+}
+
+
+
+
+
+
+/* Media Query */
 
 @media (min-width: 768px) {
 
-  .intro-pic {
-    width: 70%;
+  .logo {
+    width: 50%;
+    height: auto;
   }
 
-  .intro-text p {
-    max-width: 45ch;
-    font-size: 1.15em;
+  .nav-toggle-label {
+    display:none;
   }
 
-  .services-header {
-    margin: 0 auto;
-    max-width: 40ch;
+  nav {
+    all: unset;
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
 
-  .counseling-text p,
-  .consulting-text p,
-  .coaching-text p {
-    max-width: 50ch;
+  nav ul {
+    margin: 0 1em;
+    display: flex;
+    justify-content: space-around;
   }
 
-  .service-btn {
-    margin-top: 2em;
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+
+  nav a::before {
+    content: "";
+    display: block;
+    height: 5px;
+    background: black;
+    position: absolute;
+    top: -.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+
+  nav a:hover::before {
+    transform: scale(1, 1);
+  }
+
+  .hero-title {
+    font-size: 3em;
+  }
+
+  .hero-sub {
+    font-size: 1.75em;
+  }
+
+  .hero-btn {
+    font-size: 1.75em;
+  }
+
+  .about-pic {
+    width: 50%;
+    height: auto;
+  }
+
+  .contact-wrapper {
+    max-width: 40%;
+  }
+
+  .footer-social {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    margin: 3em 0;
   }
 
 }
 
 @media (min-width: 1024px) {
 
-  .intro-pic {
-    width: 40%;
+  .about-pic {
+    width: 35%;
+    height: auto;
   }
 
-  .intro-text p {
-    max-width: 60ch;
-    font-size: 1.25em;
+  .logo-header {
+    margin: 1em 0;
   }
 
+  .logo {
+    width: 30%;
+    height: auto;
+  }
 
 }
 
 @media (min-width: 1440px) {
 
-  .counseling-text p,
-  .consulting-text p,
-  .coaching-text p {
-    max-width: 65ch;
+  .logo {
+    width: 30%;
+    height: auto;
   }
 
 }
