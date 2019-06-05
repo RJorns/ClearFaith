@@ -41,6 +41,7 @@ p {
 
 .header-wrapper {
   width: 100%;
+  height: 10em;
   margin: 0;
   padding: 0;
   display: grid;
@@ -51,19 +52,13 @@ p {
 
 .logo-header {
   grid-column: 1;
-  margin: 1em .5em 0 .5em;
-}
-
-.fa-cross {
-  font-size: 1.5em;
+  margin: 0 .35em;
 }
 
 .logo {
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(119deg,  rgba(24,175,231,1) 25.2%, rgba(67,82,186,1) 74.6% );
+  width: 100%;
+  height: auto;
 }
-
 
 
 /* Navbar */
@@ -508,13 +503,9 @@ i.fas {
 
 @media (min-width: 768px) {
 
-  /* header {
-    display: grid;
-    grid-template-columns: 1fr auto minmax(600px, 1fr) 3fr;
-  } */
-
   .logo {
-    grid-column: 2 / span 1;
+    width: 50%;
+    height: auto;
   }
 
   .nav-toggle-label {
@@ -600,4 +591,23 @@ i.fas {
     width: 35%;
     height: auto;
   }
+
+  .logo-header {
+    margin: 1em 0;
+  }
+
+  .logo {
+    width: 30%;
+    height: auto;
+  }
+
+}
+
+@media (min-width: 1440px) {
+
+  .logo {
+    width: 30%;
+    height: auto;
+  }
+
 }
