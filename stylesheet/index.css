@@ -205,7 +205,7 @@ nav a {
   position: relative;
   margin: 0 auto;
   width: 100%;
-  height: 30em;
+  height: 35em;
 }
 
 .pic1 {
@@ -333,6 +333,7 @@ nav a {
 /* About */
 
 .about-wrapper {
+  margin-top: 5em;
   background: #f2f2f2;
 }
 
@@ -611,6 +612,10 @@ i.fas {
     transform: scale(1, 1);
   }
 
+  .fadein {
+    height: 50em;
+  }
+
   .hero-title {
     font-size: 3em;
   }
@@ -619,8 +624,8 @@ i.fas {
     font-size: 1.75em;
   }
 
-  .hero-btn {
-    font-size: 1.75em;
+  .about-wrapper {
+    margin-top: 20em;
   }
 
   .about-pic {
