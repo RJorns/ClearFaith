@@ -64,3 +64,10 @@
   }
 
 }
+
+@media (min-width: 1440px) {
+
+  .bookcover {
+    width: 50%;
+  }
+}
