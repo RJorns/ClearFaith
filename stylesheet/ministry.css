@@ -1,7 +1,7 @@
 /* Hero SLIDESHOW */
 
 .pic1 {
-  background-image: url('../assets/img/family.jpg');
+  background-image: url('../assets/img/familylarge.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -159,7 +159,7 @@ span {
 }
 
 .counseling {
-  background-image: url('https://images.unsplash.com/photo-1554730411-1385c7e46ecc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1649&q=80');
+  background-image: url('../assets/img/family.jpg');
   background-position: center;
   background-size:cover;
   background-attachment: fixed;
@@ -168,7 +168,7 @@ span {
 }
 
 .consulting {
-  background-image: url('https://images.unsplash.com/photo-1454923634634-bd1614719a7b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80');
+  background-image: url('../assets/img/crowd.jpg');
   background-position: center;
   background-size:cover;
   background-attachment: fixed;
@@ -177,7 +177,7 @@ span {
 }
 
 .coaching {
-  background-image: url('https://images.unsplash.com/photo-1425421669292-0c3da3b8f529?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1649&q=80');
+  background-image: url('../assets/img/suit.jpg');
   background-position: center;
   background-size:cover;
   background-attachment: fixed;
