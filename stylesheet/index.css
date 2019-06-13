@@ -209,19 +209,19 @@ nav a {
 }
 
 .pic1 {
-  background-image: url('https://images.unsplash.com/photo-1528736189815-2cc50c5586f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1586&q=80');
+  background-image: url('../assets/img/girlreading.jpg');
   background-size: cover;
   background-position: center;
 }
 
 .pic2 {
-  background-image: url('https://images.unsplash.com/photo-1516182823370-7a5fa91445c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');
+  background-image: url('../assets/img/guyreading.jpg');
   background-size: cover;
   background-position: center;
 }
 
 .pic3 {
-  background-image: url('https://images.unsplash.com/photo-1542296120-cd8d3eb196d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');
+  background-image: url('../assets/img/crossreading.jpg');
   background-size: cover;
   background-position: center;
 }
